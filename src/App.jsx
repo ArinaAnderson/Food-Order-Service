@@ -1,11 +1,25 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import Menu from './pages/Menu/Menu.jsx';
 import Cart from './pages/Cart/Cart.jsx';
 import Error from './pages/Error/Error.jsx';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Menu />
+  },
+  {
+    path: '/cart',
+    element: <Cart />
+  },
+  {
+    path: '*',
+    element: <Error />
+  },
+]);
 
 const App = () => {
   const [allVans, setAllVans] = useState(null);
@@ -16,13 +30,7 @@ const App = () => {
     <>
       <a href='/'>Menu</a>
       <a href='/cart'>Cart</a>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Menu />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </>
     
   );

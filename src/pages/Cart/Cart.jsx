@@ -3,8 +3,10 @@ import { Link, useSearchParams } from "react-router-dom";
 
 const Cart = () => {
   return (
-    <main className="error404">
+    <main className="cart">
       <div className="center">
+        <Link to='/'>Menu</Link>
+        <Link to='/cart'>Cart</Link>
         <h1 className="title">Cart</h1>
       </div>
     </main>

@@ -5,6 +5,8 @@ const Error = () => {
   return (
     <main className="error404">
       <div className="center">
+        <Link to='/'>Menu</Link>
+        <Link to='/cart'>Cart</Link>
         <h1 className="title">Meow....sorry</h1>
       </div>
     </main>

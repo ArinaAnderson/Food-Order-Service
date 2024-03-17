@@ -1,36 +1,12 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import Menu from './pages/Menu/Menu.jsx';
-import Cart from './pages/Cart/Cart.jsx';
-import Error from './pages/Error/Error.jsx';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Menu />
-  },
-  {
-    path: '/cart',
-    element: <Cart />
-  },
-  {
-    path: '*',
-    element: <Error />
-  },
-]);
 
 const App = () => {
-  const [allVans, setAllVans] = useState(null);
-  const [currentVan, setCurrentVan] = useState(null);
-  const [currentHostVans, setCurrentHostVans] = useState(null);
-
   return (
     <>
-      <a href='/'>Menu</a>
-      <a href='/cart'>Cart</a>
-      <RouterProvider router={router} />
+      <Link to='/'>Menu</Link>
+      <Link to='/cart'>Cart</Link>
     </>
     
   );

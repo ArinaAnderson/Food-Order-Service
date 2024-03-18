@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter, Link } from 'react-router-dom';
 
 import NavMenu from './layout/NavMenu.jsx';
+import Main from './layout/Main.jsx';
 
 import Menu from './pages/Menu/Menu.jsx';
 import Cart from './pages/Cart/Cart.jsx';
@@ -13,7 +14,7 @@ import App from './App.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <NavMenu />,
+    element: <Main />,
     children: [
       {
         path: '/',

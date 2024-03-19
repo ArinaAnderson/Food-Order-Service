@@ -48,6 +48,7 @@ code {
 .title {
   font-size: 32px;
   font-weight: bold;
+  color: rgb(152, 4, 108);
 }
 
 .btn {
@@ -174,9 +175,19 @@ code {
   transform: scale(0.9);
 }
 
+
+.sidebar__nav-list__link--active:hover,
+.sidebar__nav-list__link--active:focus {
+  transform: scale(1.1);
+  color:rgb(118, 4, 87);
+  color:rgb(155, 5, 115);
+  box-shadow: 0px 3px rgb(155, 5, 115);
+}
+
 .sidebar__nav-list__link--active {
   font-weight: 900;
   color: rgb(223, 65, 7);
+  box-shadow: 0px 3px rgb(223, 65, 7);;
 }
 
 .personal-info {
@@ -306,4 +317,68 @@ code {
   }
 }
 
+.search-field-wrap {
+  position: relative;
+}
 
+.search-field {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-width: 200px;
+  padding: 16px 30px;
+  /* padding-left: 40px; */
+  box-sizing: border-box;
+
+  font-size: 16px;
+
+  border: 2px solid rgba(0,0,0, 0.5);
+  border-radius: 5px;
+}
+/*
+.search-field::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+
+  background-image: url("/search-icon.svg");
+  background-repeat: no-repeat;
+  background-color: blue;
+}
+*/
+
+.search-field::after{
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 20px;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(142, 97, 97);
+  z-index: 7;
+  background-image: url("/search-icon.svg");
+}
+
+.menu__header h1 {
+  margin: 0;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 520px) {
+  .menu {
+    flex-basis: 80%;
+    flex-grow: 1;
+  }
+
+  .menu__header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
